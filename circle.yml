@@ -1,7 +1,6 @@
 test:
  override:
-   - bundle install: # note the colon here
-        timeout: 240 # note the double indentation (four spaces) here
+   - timeout: 240 # note the double indentation (four spaces) here
  post:
    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
    - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
